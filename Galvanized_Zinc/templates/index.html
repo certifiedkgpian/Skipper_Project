@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Process Parameter Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Parameters</h2>
+        <form action="/predict" method="post">
+            <label>Section:</label>
+            <input type="text" name="section_input" required>
+
+            <label>Thickness (MM):</label>
+            <input type="number" step="0.01" name="thickness_input" required>
+
+            <label>Jig Weight (KG):</label>
+            <input type="number" step="0.01" name="jig_weight_input" required>
+
+            <label>Avg Top Coating (µm):</label>
+            <input type="number" step="0.01" name="avg_top" required>
+
+            <label>Avg Middle Coating (µm):</label>
+            <input type="number" step="0.01" name="avg_mid" required>
+
+            <label>Avg Bottom Coating (µm):</label>
+            <input type="number" step="0.01" name="avg_bot" required>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
